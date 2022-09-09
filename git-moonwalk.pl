@@ -41,7 +41,7 @@ sub gitExecute {
         when ('stashChanges') {
             my ($commitSubject) = @_;
 
-            my $command = "git stash push -m \"$commitSubject\" --include-untracked";
+            my $command = "git stash push -m '$commitSubject' --include-untracked";
 
             return print `$command`;
         }
@@ -107,7 +107,7 @@ sub recommitChanges {
     # git stash apply $index && 
     print `git stash pop && 
            git add . && 
-           git commit -m "$commitMessage"`;
+           git commit -m '$commitMessage' --no-verify`;
 }
 
 sub cleanUpDataFile {
