@@ -19,8 +19,3 @@ git commit -m "feat(d.txt): here d.txt"
 touch e.txt
 git add e.txt
 git commit -m "feat(e.txt): here e.txt"
-
-
-
-
-
